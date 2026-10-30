@@ -1,0 +1,59 @@
+{
+  "name": "Transglot",
+  "identifier": "dev.transglot.sketch-plugin",
+  "version": "0.1.1",
+  "description": "Push Sketch text layers to a transglot project and pull the translations back.",
+  "author": "Transglot",
+  "homepage": "https://transglot.ai",
+  "appcast": "https://raw.githubusercontent.com/transglot/sketch-plugin/main/appcast.json",
+  "compatibleVersion": "97.0",
+  "bundleVersion": 1,
+  "icon": "icon.png",
+  "scope": "document",
+  "commands": [
+    {
+      "name": "Set token\u2026",
+      "identifier": "set-token",
+      "script": "transglot.js",
+      "handlers": {
+        "run": "onSetToken"
+      }
+    },
+    {
+      "name": "Push selected text",
+      "identifier": "push",
+      "shortcut": "cmd shift u",
+      "script": "transglot.js",
+      "handlers": {
+        "run": "onPush"
+      }
+    },
+    {
+      "name": "Translate with AI",
+      "identifier": "translate",
+      "script": "transglot.js",
+      "handlers": {
+        "run": "onTranslate"
+      }
+    },
+    {
+      "name": "Pull & apply a locale\u2026",
+      "identifier": "pull-apply",
+      "script": "transglot.js",
+      "handlers": {
+        "run": "onPullApply"
+      }
+    }
+  ],
+  "menu": {
+    "title": "Transglot",
+    "items": [
+      "set-token",
+      "push",
+      "translate",
+      "pull-apply"
+    ]
+  },
+  "authorEmail": "hello@transglot.ai",
+  "disableCocoaScriptPreprocessor": true
+}
